@@ -1,0 +1,113 @@
+body{
+    background-image: url("./assets/s.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container{
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* random generating text for winning and losing */
+#congratulations{
+    color:papayawhip;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Licorice', cursive;
+}
+
+#exit{
+    text-align: center;
+    padding-top: 30px;
+}
+
+#scoreboard{
+    text-align: center;
+}
+
+.box{
+    background-color: rgb(30 213 231 / 70%);
+    margin-top: 13%;
+    width: fit-content;
+    padding:20px;
+    border-radius: 10px;
+    height:28%;
+}
+
+/* playagain button */
+#playagain{
+    padding: 10px;
+    color:white;
+    background-color: green;
+    font-size:1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* exit button */
+#exitgame{
+    padding: 10px;
+    color:white;
+    background-color: red;
+    font-size:1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#exit{
+    display: flex;
+    justify-content: space-between;
+}
+
+span{
+    font-size:1.8rem;
+}
+
+/* chocolate shower */
+.chocolate {
+    position: fixed;
+    font-size: 1.5rem;
+    top: -1vh;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
+}  
+
+/* mobile responsive */
+@media screen and (max-width: 600px) {
+    
+    #playagain,
+    #exitgame {
+        width: 35%;
+        font-size: 0.8rem;
+    }
+
+    .box{
+     background-color: rgb(30 213 231 / 70%);
+     margin-top: 40%;
+     width:fit-content;
+     height:fit-content;
+}
+    body{
+        background-attachment: fixed;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+}
+
+/* animation for chocolate shower */
+@keyframes fall {
+    from {
+       transform: translateY(0vh) translateX(-10vw); 
+    }
+    to {
+       transform: translateY(105vh) translateX(10vw); 
+    }
+  }

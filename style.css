@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background-color: rgb(232 154 52 / 74%);
+    gap: 800px;
+    margin: 10px;
+    padding: 5px;
+    width: 97%;
+  }
+  
+  body {
+    background-image: url("./assets/chocolategame.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: black;
+  }
+  
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #basket {
+    position: absolute;
+    width: 10%;
+    top: 70%;
+    left: 0%;
+  }
+  
+  .skygift {
+    display: block;
+    transform: translate(100%, -100%);
+    animation: fall 3s linear infinite;
+  }
+  
+  .sweets {
+    width: 100vw;
+  }
+  
+  @media screen and (min-width: 325px) and (max-width: 600px) {
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-size:cover;
+      background-attachment: fixed; 
+      position: relative;
+  
+    }
+  
+    #basket {
+      width: 35%;
+    }
+  
+    .header {
+      gap: 60px;
+      font-size: 0.8rem;
+    }
+    .sweets img {
+      width: 40%;
+    }
+  }
+  
+  @keyframes fall {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
